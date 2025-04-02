@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja strona</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Moja Strona</title>
+    <style>
+        /* Styl centrowania obrazka */
+        body {
+            display: flex;
+            justify-content: center; /* Wyśrodkowanie w poziomie */
+            align-items: center; /* Wyśrodkowanie w pionie */
+            height: 100vh; /* Pełna wysokość ekranu */
+            margin: 0; /* Usunięcie domyślnych marginesów */
+            background-color: #f4f4f4; /* Opcjonalne tło */
+        }
+        img {
+            max-width: 100%; /* Obrazek nie będzie większy niż ekran */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <!-- To jest schemat -->
-    <div class="center">
-        <img src="Schemat.jpg" alt="Schemat">
-    </div>
-    <!-- Koniec sekcji z obrazkiem -->
+
+    <!-- Obrazek będzie idealnie na środku -->
+    <img src="Schemat.jpg" alt="Schemat">
+
 </body>
 </html>
