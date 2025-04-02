@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moja Strona</title>
     <style>
-        /* Styl centrowania obrazka */
-        body {
+        /* Wyśrodkowanie obrazka */
+        .container {
             display: flex;
-            justify-content: center; /* Wyśrodkowanie w poziomie */
-            align-items: center; /* Wyśrodkowanie w pionie */
+            justify-content: center;
+            align-items: center;
             height: 100vh; /* Pełna wysokość ekranu */
-            margin: 0; /* Usunięcie domyślnych marginesów */
-            background-color: #f4f4f4; /* Opcjonalne tło */
         }
         img {
-            max-width: 100%; /* Obrazek nie będzie większy niż ekran */
+            max-width: 100%;
             height: auto;
         }
     </style>
 </head>
 <body>
 
-    <!-- Obrazek będzie idealnie na środku -->
-    <img src="Schemat.jpg" alt="Schemat">
+    <div class="container">
+        <img src="Schemat.jpg" alt="Schemat">
+    </div>
 
 </body>
 </html>
