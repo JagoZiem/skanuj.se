@@ -19,9 +19,9 @@
             flex-direction: column;
         }
 
-        /* Wyśrodkowanie obrazka PNG */
+        /* Wyśrodkowanie obrazka */
         img {
-            width: 80%;  /* Na dużych ekranach 80% szerokości */
+            width: 80%; /* Na dużych ekranach 80% szerokości */
             height: auto;
             border-radius: 8px;
         }
@@ -54,7 +54,7 @@
             font-size: 24px;
         }
 
-        /* 🔽 Dostosowanie dla telefonów */
+        /* Dostosowanie dla telefonów */
         @media (max-width: 768px) {
             img {
                 width: 95%;
@@ -64,20 +64,17 @@
     </style>
 </head>
 <body>
-    <!-- Wyświetlanie obrazka PNG -->
-    <img src="Schemat.png" alt="Schemat">
+    <!-- Obrazek z aktywnymi linkami -->
+    <img src="Schemat.png" alt="Schemat" usemap="#socialMediaMap">
 
-    <!-- Interaktywne ikony social media -->
-    <div class="icons">
-        <div class="icon" onclick="window.open('https://www.facebook.com/skanuj.se', '_blank')">
-            <span>📘</span> <!-- Ikona Facebooka -->
-        </div>
-        <div class="icon" onclick="window.open('https://www.instagram.com/skanuj.se', '_blank')">
-            <span>📸</span> <!-- Ikona Instagrama -->
-        </div>
-        <div class="icon" onclick="window.location.href='tel:+48791939112'">
-            <span>📞</span> <!-- Ikona telefonu -->
-        </div>
-    </div>
+    <!-- Definicja mapy obrazkowej -->
+    <map name="socialMediaMap">
+        <!-- Link do Facebooka -->
+        <area shape="rect" coords="50,50,150,150" href="https://www.facebook.com/skanuj.se" target="_blank" alt="Facebook">
+        <!-- Link do Instagrama -->
+        <area shape="rect" coords="200,50,300,150" href="https://www.instagram.com/skanuj.se" target="_blank" alt="Instagram">
+        <!-- Link do telefonu -->
+        <area shape="rect" coords="350,50,450,150" href="tel:+48791939112" alt="Telefon">
+    </map>
 </body>
 </html>
