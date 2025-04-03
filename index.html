@@ -18,9 +18,17 @@
             background-color: black; /* Czarne tło */
         }
         img {
-            max-width: 80%;  /* Obrazek zajmuje maksymalnie 80% szerokości ekranu */
-            max-height: 80vh; /* Obrazek zajmuje maksymalnie 80% wysokości ekranu */
-            object-fit: contain; /* Zapobiega przycinaniu */
+            max-width: 80%;  /* Na dużych ekranach 80% szerokości */
+            max-height: 80vh; /* Na dużych ekranach 80% wysokości */
+            object-fit: contain;
+        }
+
+        /* 🔽 Dostosowanie dla telefonów */
+        @media (max-width: 768px) {
+            img {
+                max-width: 95%;  /* Na telefonach 95% szerokości */
+                max-height: 70vh; /* Na telefonach mniejsza wysokość */
+            }
         }
     </style>
 </head>
