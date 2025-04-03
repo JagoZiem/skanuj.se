@@ -22,6 +22,20 @@
             height: 80vh; /* Na dużych ekranach 80% wysokości */
             border: none;
         }
+        a {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: gray;
+        }
 
         /* 🔽 Dostosowanie dla telefonów */
         @media (max-width: 768px) {
@@ -29,10 +43,16 @@
                 width: 95%;  /* Na telefonach 95% szerokości */
                 height: 70vh; /* Na telefonach mniejsza wysokość */
             }
+            a {
+                top: 5px;
+                right: 5px;
+                padding: 8px 12px;
+            }
         }
     </style>
 </head>
 <body>
     <iframe src="Schemat.pdf" title="Podgląd PDF"></iframe>
+    <a href="Schemat.pdf" target="_blank">📄 Otwórz PDF w nowej karcie</a>
 </body>
 </html>
