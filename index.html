@@ -19,11 +19,11 @@
             flex-direction: column;
         }
 
-        /* Wyśrodkowanie obrazka PDF */
-        iframe {
-            width: 80%;
-            height: 80vh;
-            border: none;
+        /* Wyśrodkowanie obrazka PNG */
+        img {
+            width: 80%;  /* Na dużych ekranach 80% szerokości */
+            height: auto;
+            border-radius: 8px;
         }
 
         /* Kontener z ikonami */
@@ -56,16 +56,16 @@
 
         /* 🔽 Dostosowanie dla telefonów */
         @media (max-width: 768px) {
-            iframe {
+            img {
                 width: 95%;
-                height: 70vh;
+                height: auto;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Wyświetlanie obrazka PDF -->
-    <iframe src="Schemat.pdf" title="Podgląd PDF"></iframe>
+    <!-- Wyświetlanie obrazka PNG -->
+    <img src="Schemat.png" alt="Schemat">
 
     <!-- Interaktywne ikony social media -->
     <div class="icons">
