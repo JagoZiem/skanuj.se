@@ -15,44 +15,66 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: black; /* Czarne tło */
+            background-color: black;
+            flex-direction: column;
         }
-        iframe {
+        img {
             width: 80%;  /* Na dużych ekranach 80% szerokości */
-            height: 80vh; /* Na dużych ekranach 80% wysokości */
-            border: none;
+            height: auto;
+            border-radius: 8px;
         }
-        a {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+
+        /* Kontener z ikonami */
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
             background-color: white;
-            color: black;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        a:hover {
-            background-color: gray;
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .icon span {
+            font-size: 24px;
         }
 
         /* 🔽 Dostosowanie dla telefonów */
         @media (max-width: 768px) {
-            iframe {
-                width: 95%;  /* Na telefonach 95% szerokości */
-                height: 70vh; /* Na telefonach mniejsza wysokość */
-            }
-            a {
-                top: 5px;
-                right: 5px;
-                padding: 8px 12px;
+            img {
+                width: 95%;
             }
         }
     </style>
 </head>
 <body>
-    <iframe src="Schemat.pdf" title="Podgląd PDF"></iframe>
-    <a href="Schemat.pdf" target="_blank">📄 Otwórz PDF w nowej karcie</a>
+    <!-- Wyświetlanie obrazka -->
+    <img src="Schemat.png" alt="Schemat">
+
+    <!-- Interaktywne ikony social media -->
+    <div class="icons">
+        <div class="icon" onclick="window.open('https://www.facebook.com/skanuj.se', '_blank')">
+            <span>📘</span> <!-- Ikona Facebooka -->
+        </div>
+        <div class="icon" onclick="window.open('https://www.instagram.com/skanuj.se', '_blank')">
+            <span>📸</span> <!-- Ikona Instagrama -->
+        </div>
+        <div class="icon" onclick="window.location.href='tel:+48791939112'">
+            <span>📞</span> <!-- Ikona telefonu -->
+        </div>
+    </div>
 </body>
 </html>
