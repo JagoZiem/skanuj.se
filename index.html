@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktywny obrazek PDF</title>
+    <title>Moja strona</title>
     <style>
         * {
             margin: 0;
@@ -15,16 +15,21 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: black; /* Czarne tło */
+            background-color: black;
         }
-        embed {
-            width: 90%;
-            height: 90vh;
-            border: none;
+        img, iframe {
+            max-width: 80%;
+            max-height: 80vh;
+        }
+        @media (max-width: 768px) {
+            img, iframe {
+                max-width: 95%;
+                max-height: 70vh;
+            }
         }
     </style>
 </head>
 <body>
-    <embed src="Schemat.pdf" type="application/pdf">
+    <iframe src="Schemat.svg"></iframe>
 </body>
 </html>
