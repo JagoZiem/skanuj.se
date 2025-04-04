@@ -17,19 +17,22 @@
             height: 100vh;
             background-color: black;
         }
-        img, iframe {
-            max-width: 80%;
-            max-height: 80vh;
+        svg {
+            width: 80vw;  /* SVG na 80% szerokości ekranu */
+            height: auto; /* Automatyczna wysokość */
+            max-height: 80vh; /* Maksymalna wysokość 80% ekranu */
         }
         @media (max-width: 768px) {
-            img, iframe {
-                max-width: 95%;
+            svg {
+                width: 95vw;
                 max-height: 70vh;
             }
         }
     </style>
 </head>
 <body>
-    <iframe src="Schemat.svg"></iframe>
+    <!-- Osadzenie SVG bez iframe -->
+    <object type="image/svg+xml" data="Schemat.svg"></object>
 </body>
 </html>
+
