@@ -18,14 +18,17 @@
             background-color: black;
         }
         svg {
-            width: 80vw;  /* SVG na 80% szerokości ekranu */
-            height: auto; /* Automatyczna wysokość */
-            max-height: 80vh; /* Maksymalna wysokość 80% ekranu */
+            width: 100%;  /* SVG zajmuje całą szerokość ekranu */
+            height: 100%; /* SVG zajmuje całą wysokość ekranu */
+            max-width: 100vw; /* Maksymalna szerokość to 100% szerokości okna */
+            max-height: 100vh; /* Maksymalna wysokość to 100% wysokości okna */
+            object-fit: contain; /* Zachowanie proporcji SVG */
         }
         @media (max-width: 768px) {
             svg {
-                width: 95vw;
-                max-height: 70vh;
+                width: 100vw; /* Zwiększenie szerokości na urządzeniach mobilnych */
+                height: auto; /* Dopasowanie wysokości automatycznie */
+                max-height: 70vh; /* Maksymalna wysokość na urządzeniach mobilnych */
             }
         }
     </style>
@@ -35,4 +38,3 @@
     <object type="image/svg+xml" data="Schemat.svg"></object>
 </body>
 </html>
-
